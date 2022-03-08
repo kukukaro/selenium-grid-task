@@ -1,5 +1,6 @@
 package org.epam.poland.aqa.course.pages.apple;
 
+import org.epam.poland.aqa.course.common.Constants;
 import org.epam.poland.aqa.course.pages.base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,7 @@ public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
         super(driver);
+        driver.get(Constants.APPLE_HOME_PAGE_URL);
         PageFactory.initElements(driver, this);
     }
 

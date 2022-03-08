@@ -4,6 +4,7 @@ import org.epam.poland.aqa.course.common.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -21,6 +22,11 @@ public class TestStore {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName(browser);
         driver = new RemoteWebDriver(new URL(Constants.SELENIUM_GRID_URL), capabilities);
+    }
+
+    @AfterTest
+    public void tearDown() {
+        driver.close();
     }
 
     @Test
