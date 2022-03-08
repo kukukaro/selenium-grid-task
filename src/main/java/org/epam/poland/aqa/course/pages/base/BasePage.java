@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-import static org.epam.poland.aqa.course.common.Config.AMAZON_CORRECT_LOGIN;
 import static org.epam.poland.aqa.course.common.Config.EXPLICIT_WAIT;
 
 public class BasePage {
@@ -22,12 +19,6 @@ public class BasePage {
 
     public void open(String url) {
         driver.get(url);
-    }
-
-    public boolean userIsLoginIn() {
-        return waitElementIsVisible(driver.findElement(userInfoLocator))
-                .getText()
-                .contains(AMAZON_CORRECT_LOGIN);
     }
 
     protected WebElement waitElementIsVisible(WebElement element) {

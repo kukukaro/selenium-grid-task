@@ -1,8 +1,10 @@
 package org.epam.poland.aqa.course.common;
 
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import static org.epam.poland.aqa.course.common.Constants.WINDOWS_CHROME_DRIVER;
 import static org.epam.poland.aqa.course.common.Constants.WINDOWS_CHROME_DRIVER_PATH;
